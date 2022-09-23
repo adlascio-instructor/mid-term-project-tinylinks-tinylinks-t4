@@ -21,10 +21,11 @@
   <body>
     <main style="margin: 1em">
       <h3>Create TinyURL</h3>
-      <form class="form-inline">
+      <form action="/urls" method="post" class="form-inline">
         <div class="form-group mb-2">
           <label for="longURL">Enter a URL:</label>
           <input
+            name="url"
             class="form-control"
             type="text"
             placeholder="http://"
