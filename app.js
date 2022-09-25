@@ -52,7 +52,6 @@ app.get("/urls", (req, res) => {
 app.post("/urls", (req, res) => {
     //  console.log("url is created");
     
-
     var shortUrl = makeid(6)
     if (req.body.url.startsWith("https://")){
        var longUrl = req.body.url 
@@ -69,15 +68,6 @@ app.post("/urls", (req, res) => {
 
     res.redirect("/urls")
 
-});
-
-app.get("/urls/edit/:id", (req, res) => {
-    const id = req.params.id;
-    var data = fs.readFileSync("./models/urls.json")
-    var newData = JSON.parse(data)
-    var item = newData[id]
-  //  const url = urlDatabase[id];
-      res.render("editUrl", { item });
 });
 
 app.post("/urls/edit/:id", (req, res) => {
