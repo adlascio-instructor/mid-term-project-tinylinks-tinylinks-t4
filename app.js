@@ -2,6 +2,8 @@ const { response } = require("express");
 const express = require("express");
 var fs = require("fs");
 const app = express();
+var authRoutes = require("./controllers/auth")
+
 app.use(express.urlencoded());
 app.use(express.json());
 
@@ -18,17 +20,12 @@ function makeid(length) {
 
 app.set("view engine", "ejs")
 
-app.get("/login", (req, res) => {
-    res.render("login");
-});
 
 app.get("/urls/new", (req, res) => {
     res.render("newUrl");
 });
 
-app.get("/register", (req, res) => {
-    res.render("register");
-});
+
 
 app.get("/myurl/:id", (req, res) => {
     const id = req.params.id;
@@ -88,5 +85,7 @@ app.get("/urls/delete/:id", (req, res) => {
     fs.writeFileSync("./models/urls.json", JSON.stringify(newData))
     res.redirect("/urls")
 });
+
+app.use(authRoutes)
 
 app.listen(8001, () => console.log("server running 8001"));
