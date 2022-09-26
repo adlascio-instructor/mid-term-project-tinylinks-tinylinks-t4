@@ -8,13 +8,13 @@ const { v4: uuidv4 } = require('uuid');
 
 routes.get("/login", (req, res) => {
     res.render("login", {
-        message:""
+        message:"Log in succesful"
     });
 });
 
 routes.get("/register", (req, res) => {
     res.render("register", {
-        message:""
+        message:"Register succesful"
     });
 });
 

@@ -1,7 +1,1 @@
-[
-  {
-  "id":"gjiodgioasf",
-  "email":"test@test.com",
-  "password":"1234"
-  }
-  ]
+[{"id":"gjiodgioasf","email":"test@test.com","password":"1234"},{"id":"549619cd-25fa-4a15-b1aa-0290fdcf79ca","email":"jorge@jorge.com","password":"4321"},{"id":"fe30cc87-233c-46fc-8a6e-81d7a4937a1b","email":"luisa@luisa.com","password":"321"},{"id":"97b47033-6fec-40bd-99c2-4f1a111e0e5d","email":"sdf@ds.com","password":"asf"},{"id":"5384a1c9-e8ae-4d8d-b404-61c21baf2ffe","email":"sdf@dsfas.com","password":"sdfas"}]
